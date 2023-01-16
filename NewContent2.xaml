@@ -3,14 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp3.NewContent2">
     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
-        <!--<Label 
-            Text="NewContent2"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />-->
-
-        <Label x:Name="Lbl" Text="{Binding MM.Name}"></Label>
-        <Label Text="{Binding MM.Name}"></Label>
-        <Label Text="{Binding MM.Patronymic}"></Label>
-        <Image Source="{Binding MM.Source}" WidthRequest="100" HeightRequest="100"></Image>
+        <Label x:Name="Lbl" Text="{Binding MM.Surname}" HorizontalOptions="Center"></Label>
+        <Label Text="{Binding MM.Name}"  HorizontalOptions="Center"></Label>
+        <Label Text="{Binding MM.Patronymic}"  HorizontalOptions="Center"></Label>
+        <Image Source="{Binding MM.Source}" WidthRequest="100" HeightRequest="100"  HorizontalOptions="Center"></Image>
     </VerticalStackLayout>
 </ContentView>

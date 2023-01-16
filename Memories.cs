@@ -15,12 +15,12 @@ namespace MauiApp3
         public string patronymic;
         public string source;
 
-        public Memories(string name, string surname, string patronymic, string source)
+        public Memories()
         {
-            Name = name;
-            Surname = surname;
-            Patronymic = patronymic;
-            Source = source;
+            name = "Пауль";
+            surname = "Гегель";
+            patronymic = "Викторович";
+            source = "dotnet_bot.png";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

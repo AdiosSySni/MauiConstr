@@ -10,20 +10,34 @@ public partial class MainPage : ContentPage
 
     public MainPage()
 	{
-        people = new ObservableCollection<Memories>();
-        people.Add(new Memories("Илья", "Васькин", "Владимирович", "dotnet_bot.png"));
-        people.Add(new Memories("Пауль", "Гегель", "Викторович", "dotnet_bot.png"));
-
         BindingContext = this;
         InitializeComponent();
 	}
 
 	private void btnClick(object sender, EventArgs e)
 	{
-		for (int i = 0; i < Convert.ToInt32(Entry.Text); i++)
+        if(Entry.Text.Any(c => char.IsLetter(c)))
+        {
+            Entry.Text = "";
+            return;
+        }
+
+
+
+
+            if (Convert.ToInt32(Entry.Text) == 0)
 		{
-			VSL.Add(new NewContent2());
+            VSL.Clear();
 		}
+		else
+		{
+            for (int i = 0; i < Convert.ToInt32(Entry.Text); i++)
+            {
+                VSL.Add(new NewContent2(new Memories()));
+            }
+        }
+
+		
       
 	}
 
