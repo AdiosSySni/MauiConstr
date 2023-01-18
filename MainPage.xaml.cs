@@ -1,5 +1,4 @@
-﻿
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 
 namespace MauiApp3;
 
@@ -22,10 +21,7 @@ public partial class MainPage : ContentPage
             return;
         }
 
-
-
-
-            if (Convert.ToInt32(Entry.Text) == 0)
+        if (Convert.ToInt32(Entry.Text) == 0)
 		{
             VSL.Clear();
 		}
@@ -36,10 +32,5 @@ public partial class MainPage : ContentPage
                 VSL.Add(new NewContent2(new Memories()));
             }
         }
-
-		
-      
 	}
-
 }
-

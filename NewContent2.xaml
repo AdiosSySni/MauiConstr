@@ -3,6 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp3.NewContent2">
     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <!--<Button Clicked="Button_Clicked"></Button>-->
+        <VerticalStackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+        </VerticalStackLayout.GestureRecognizers>
         <Label x:Name="Lbl" Text="{Binding MM.Surname}" HorizontalOptions="Center"></Label>
         <Label Text="{Binding MM.Name}"  HorizontalOptions="Center"></Label>
         <Label Text="{Binding MM.Patronymic}"  HorizontalOptions="Center"></Label>
